@@ -9,7 +9,7 @@ router.get('/test', (req, res) => {
 
 // ─────────────────────────────────────────────
 // POST /api/auth/send-otp
-// Body JSON : { "phone": "+22967XXXXXXXX" }
+// Body JSON : { "phone": "+2291XXXXXXXX" }
 // ─────────────────────────────────────────────
 router.post('/send-otp', async (req, res) => {
 
@@ -29,7 +29,7 @@ router.post('/send-otp', async (req, res) => {
   if (!beninRegex.test(phone)) {
     return res.status(400).json({
       success: false,
-      message: "Format invalide. Exemple correct : +229167123456"
+      message: "Format invalide. Exemple correct : +229162805416"
     });
   }
 
@@ -54,7 +54,7 @@ router.post('/send-otp', async (req, res) => {
     message: `OTP envoyé au ${phone}. Valable 10 minutes.`,
     data
   });
-
+//Fin code Pedro
 });
 
 module.exports = router;
